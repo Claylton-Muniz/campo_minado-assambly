@@ -1,5 +1,7 @@
 .eqv SIZE 8
 .eqv BOMB_COUNT 10
+.eqv HIT -1
+.eqv NO_BOMB -2
 
 .macro save_context
 	addi $sp, $sp, -36

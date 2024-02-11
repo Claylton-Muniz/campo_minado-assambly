@@ -1,0 +1,4 @@
+- no play falta fazer a revelação das celulas adjacentes, pois para testar o agora precisamos ver a vitoria aconteceu ou não. precisamos do (checkVitory)
+- motivo:
+  bne $v0, $zero, else_if_main 	# if (!play(board, row, column)) { # bne - $v0 != $zero
+  jal checkVictory							# else if (checkVictory(board)) {

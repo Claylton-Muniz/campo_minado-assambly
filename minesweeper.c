@@ -115,9 +115,12 @@
         }
         if (board[row][column] == -2) {
             int x = countAdjacentBombs(board, row, column); // Marks as revealed
+            printf("x = %d \n", x);
             board[row][column] = x;
-            if (!x)
+            if (!x) {
+                printf("x = %d e entrou no if \n", x);
                 revealAdjacentCells(board, row, column); // Reveals adjacent cells
+            }
         }
         return 1; // Game continues
     }

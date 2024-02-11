@@ -55,7 +55,7 @@ main:
   move $a1, $s3
   jal play
   addi $sp, $sp, 4
-  bne $v0, $zero, else_if_main 	# if (!play(board, row, column)) {
+  bne $v0, $zero, else_if_main 	# if (!play(board, row, column)) { # bne - $v0 != $zero
     li $s1, 0										# gameActive = 0;
   la $a0, msg_lose							# printf("Oh no! You hit a bomb! Game over.\n");
   li $v0, 4
@@ -64,8 +64,8 @@ main:
   
  else_if_main:
  	move $a0, $s0
-  jal checkVictory							# else if (checkVictory(board)) {
-  beq $v0, $zero, end_if_main
+  jal checkVictory							# else if (checkVictory(board)) { 
+  beq $v0, $zero, end_if_main   # if $v0 == 0 ir para end_if_main --------------------------------------------------------------------------------------
   la $a0, msg_win								# printf("Congratulations! You won!\n");
   li $v0, 4
   syscall
