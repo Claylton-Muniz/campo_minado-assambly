@@ -20,8 +20,10 @@ play:
         li		$v0, 0		# stop game - lose
         j end_if_check
     elseif_reveal:
-        li		$t1, 1		# $t1 = 1
-        sw		$t1, 0($t0)		# board[i][j] = $t1
+        jal		countAdjacentBombs		# ir para countAdjacentBombs e save $ra
+        move 	$t1, $t6		        # $t1 <- x = countAdjacentBombs
+        move 	$t0, $t5		        # $t0 = $t5
+        sw		$t1, 0($t0)		        # board[i][j] = $t1
         j end_if_check
     end_if_check:
     

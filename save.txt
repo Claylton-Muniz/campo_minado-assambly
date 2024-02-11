@@ -1,4 +1,7 @@
-- no play falta fazer a revelação das celulas adjacentes, pois para testar o agora precisamos ver a vitoria aconteceu ou não. precisamos do (checkVitory)
-- motivo:
-  bne $v0, $zero, else_if_main 	# if (!play(board, row, column)) { # bne - $v0 != $zero
-  jal checkVictory							# else if (checkVictory(board)) {
+- checkVictory completo e testado
+
+- countAdjacentBombs completo e testado
+
+- play quase pronto só falta revelar as celulas dos lados se 0
+
+- falta revealNeighboringCells

@@ -65,7 +65,7 @@ main:
  else_if_main:
  	move $a0, $s0
   jal checkVictory							# else if (checkVictory(board)) { 
-  beq $v0, $zero, end_if_main   # if $v0 == 0 ir para end_if_main --------------------------------------------------------------------------------------
+  beq $v0, $zero, end_if_main   # if $v0 == 0 ir para end_if_main
   la $a0, msg_win								# printf("Congratulations! You won!\n");
   li $v0, 4
   syscall
