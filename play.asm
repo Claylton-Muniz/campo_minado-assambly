@@ -26,7 +26,7 @@ play:
         sw		$t1, 0($t0)		        # board[i][j] = $t1
 
     bne		$t1, $zero, reveal_adjacent	# if $t1 !=zerot1 then goto target
-        # jal revealNeighboringCells
+        jal revealNeighboringCells
     reveal_adjacent:
 
         j end_if_check
